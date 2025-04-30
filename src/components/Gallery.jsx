@@ -61,9 +61,9 @@ const Gallery = () => {
   ];
 
   // Filter cases based on active category
-  const filteredCases = activeCategory === 'All' 
+  const filteredCases = (activeCategory === 'All' 
     ? cases 
-    : cases.filter(item => item.category === activeCategory);
+    : cases.filter(item => item.category === activeCategory)).slice(0, 3);
 
   const fadeIn = {
     hidden: { opacity: 0, y: 30 },
