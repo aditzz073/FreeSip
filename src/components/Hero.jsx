@@ -6,6 +6,7 @@ import './Hero.css';
 const Hero = () => {
   return (
     <section className="hero-section">
+      <div className="hero-bg-blur"></div>
       <div className="container">
         <div className="hero-content">
           <motion.h1 

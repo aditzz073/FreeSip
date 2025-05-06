@@ -1,6 +1,6 @@
 .social-media-section {
-  background-color: var(--white);
-  padding: 4rem 0;
+  background-color: #e6f7ff;
+  padding: 2rem 0;
   text-align: center;
 }
 
@@ -51,7 +51,7 @@
 
 @media (max-width: 768px) {
   .social-media-section {
-    padding: 3rem 0;
+    padding: 1.2rem 0;
   }
   
   .social-links {

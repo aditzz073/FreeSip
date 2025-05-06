@@ -38,9 +38,8 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-container">
         <Link to="home" className="navbar-logo" spy={true} smooth={true} duration={500}>
-          <h2>FreeSip</h2>
+          <img src="/logo.png" alt="FreeSip Logo" style={{ height: '44px', width: 'auto', display: 'block' }} />
         </Link>
-
         <div className={`navbar-links ${mobileMenuOpen ? 'active' : ''}`}>
           {navItems.map((item) => (
             <Link

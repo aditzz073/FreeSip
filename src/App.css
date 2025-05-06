@@ -73,9 +73,9 @@ a:hover {
 
 .container {
   width: 100%;
-  max-width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 0.75rem;
 }
 
 .section {
@@ -156,7 +156,7 @@ a:hover {
 
 @media (max-width: 576px) {
   .container {
-    padding: 0 1rem;
+    padding: 0 0.5rem;
   }
   
   .section {
