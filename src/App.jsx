@@ -40,10 +40,12 @@ function App() {
       <Element name="gallery">
         <Gallery />
       </Element>
-      <Element name="contact">
+      <Element name="partner-with-us" id="partner-with-us">
         <CallToAction />
       </Element>
-      <SocialMedia />
+      <Element name="contact">
+        <SocialMedia />
+      </Element>
       <Footer />
     </>
   );

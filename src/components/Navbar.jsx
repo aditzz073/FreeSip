@@ -68,6 +68,12 @@ const Navbar = () => {
           className="btn btn-primary navbar-cta"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          onClick={() => {
+            const element = document.getElementById('partner-with-us');
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
         >
           Partner with Us
         </motion.button>
