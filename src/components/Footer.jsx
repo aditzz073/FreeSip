@@ -18,7 +18,9 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-logo">
-            <h2>FreeSip</h2>
+            <Link to="home" spy={true} smooth={true} duration={500}>
+              <img src="/logo.png" alt="FreeSip Logo" className="footer-logo-img" />
+            </Link>
             <p className="tagline">Marketing that quenches.</p>
           </div>
           
@@ -46,14 +48,15 @@ const Footer = () => {
               <h4>Contact</h4>
               <ul>
                 <li>
-                  <a href="mailto:info@freesip.com">info@freesip.com</a>
+                  <a href="mailto:contact.freesip@gmail.com">contact.freesip@gmail.com</a>
                 </li>
                 <li>
-                  <a href="tel:+12345678900">+1 (234) 567-8900</a>
+                  <a href="tel:+917204318987">+91 7204318987</a>
                 </li>
                 <li>
-                  123 Hydration Street<br />
-                  Splash City, SF 94105
+                  Kumaraswamy Layout,<br />
+                  Banashankari, Bengaluru, <br />
+                  Karnataka, India - 560078
                 </li>
               </ul>
             </div>
@@ -76,7 +79,7 @@ const Footer = () => {
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; {currentYear} FreeSip. All rights reserved.</p>
+          <p>&copy; {currentYear} FreeSip. All rights reserved.  </p>
           <p className="sustainability-note">
             Our bottles are made from 100% recyclable materials.
           </p>

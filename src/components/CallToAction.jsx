@@ -28,26 +28,69 @@ const CallToAction = () => {
       ...prevState,
       [name]: value
     }));
+    
+    // Clear any error that might be showing
+    if (formStatus.error) {
+      setFormStatus({
+        submitted: false,
+        error: false,
+        message: ''
+      });
+    }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // Simulate form submission success
-    // In a real implementation, you would send this to your backend
-    setFormStatus({
-      submitted: true,
-      error: false,
-      message: 'Thank you! We will be in touch soon.'
-    });
+    try {
+      // Validate form inputs
+      if (!formData.name || !formData.email || !formData.company || !formData.message) {
+        setFormStatus({
+          submitted: false,
+          error: true,
+          message: 'Please fill in all fields.'
+        });
+        return;
+      }
+      
+      // In a real implementation, you would make an API call to your backend
+      // For example:
+      // const response = await fetch('/api/contact', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(formData)
+      // });
+      
+      // Instead, we'll simulate a successful submission after a brief delay
+      setFormStatus({
+        submitted: false,
+        error: false,
+        message: 'Sending your message...'
+      });
+      
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      setFormStatus({
+        submitted: true,
+        error: false,
+        message: 'Thank you! We will be in touch soon.'
+      });
 
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      message: '',
-    });
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        message: '',
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setFormStatus({
+        submitted: false,
+        error: true,
+        message: 'Something went wrong. Please try again.'
+      });
+    }
   };
 
   const fadeIn = {
@@ -96,7 +139,7 @@ const CallToAction = () => {
             <p className="testimonial">
               <em>"FreeSip transformed our event presence. We saw a 40% increase in social media mentions and incredible brand recall."</em>
               <br />
-              <strong>— Marketing Director, Tech Startup</strong>
+              <strong>— Marketing Director, Arivae Clothing </strong>
             </p>
           </motion.div>
           
@@ -121,6 +164,16 @@ const CallToAction = () => {
               </div>
             ) : (
               <form className="contact-form" onSubmit={handleSubmit}>
+                {formStatus.error && (
+                  <div className="error-message">
+                    {formStatus.message}
+                  </div>
+                )}
+                {formStatus.message && !formStatus.error && !formStatus.submitted && (
+                  <div className="info-message">
+                    {formStatus.message}
+                  </div>
+                )}
                 <div className="form-group">
                   <label htmlFor="name">Name</label>
                   <input
@@ -129,7 +182,8 @@ const CallToAction = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    required
+                    placeholder="Your name"
+                    autoComplete="name"
                   />
                 </div>
                 
@@ -141,7 +195,8 @@ const CallToAction = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    required
+                    placeholder="your.email@example.com"
+                    autoComplete="email"
                   />
                 </div>
                 
@@ -153,7 +208,8 @@ const CallToAction = () => {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    required
+                    placeholder="Your company name"
+                    autoComplete="organization"
                   />
                 </div>
                 
@@ -165,17 +221,20 @@ const CallToAction = () => {
                     rows="4"
                     value={formData.message}
                     onChange={handleChange}
-                    required
+                    placeholder="How can FreeSip help your brand?"
                   ></textarea>
                 </div>
                 
                 <motion.button 
                   type="submit" 
                   className="btn btn-primary btn-block"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={!formStatus.message ? { scale: 1.05 } : {}}
+                  whileTap={!formStatus.message ? { scale: 0.95 } : {}}
+                  disabled={formStatus.message && !formStatus.error && !formStatus.submitted}
                 >
-                  Send Message
+                  {formStatus.message && !formStatus.error && !formStatus.submitted 
+                    ? "Sending..." 
+                    : "Send Message"}
                 </motion.button>
               </form>
             )}

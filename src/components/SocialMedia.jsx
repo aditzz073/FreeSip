@@ -13,7 +13,7 @@ const SocialMedia = () => {
     { 
       name: 'Instagram', 
       icon: <FaInstagram size={28} />, 
-      url: 'https://instagram.com/freesip',
+      url: 'https://instagram.com/freesip_in',
       color: '#E1306C'
     },
     { 
@@ -31,7 +31,7 @@ const SocialMedia = () => {
     { 
       name: 'Email', 
       icon: <FaEnvelope size={28} />, 
-      url: 'mailto:connect@freesip.com',
+      url: 'mailto:contact.freesip@gmail.com',
       color: '#0088cc'
     }
   ];
