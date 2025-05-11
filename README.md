@@ -1,125 +1,67 @@
+<p align="center">
+  <img src="./public/logo.png" alt="FreeSip Logo" width="85">
+</p>
+
 # FreeSip - Marketing that Quenches
+A modern React-based website for FreeSip, an innovative B2B event marketing solution using branded water bottles as promotional media.
 
-A stunning, responsive website for FreeSip, an innovative B2B event-based marketing startup that uses branded bottled water as a physical advertising medium.
+## Key Features
 
-## Features
+- Responsive design with smooth scrolling navigation
+- Interactive UI elements using Framer Motion animations
+- Social media integration with contact form
+- Optimized for mobile and desktop experiences
 
-- Modern, clean design using React and Vite
-- Responsive layout for both mobile and desktop
-- Smooth animations using Framer Motion
-- Fully accessible navigation with smooth scrolling
-- Interactive UI components and form handling
+## Sections
 
-## Website Sections
+- **Home**: Eye-catching hero section with main value proposition
+- **About**: Company overview and mission statement
+- **How It Works**: Step-by-step process explanation
+- **Benefits**: Key advantages for partner brands
+- **Gallery**: Showcase of implementation examples
+- **Contact**: Social media links and partnership opportunities
 
-1. **Landing Page** - Featuring the main tagline "Marketing that quenches" with call-to-action buttons
-2. **About FreeSip** - Company description and key pillars
-3. **How It Works** - Three-step visual process explanation
-4. **Benefits for Brands** - Key advantages of choosing FreeSip for marketing
-5. **Gallery/Use Cases** - Filterable gallery showing various implementation contexts
-6. **Call to Action / Contact** - Form for potential clients to reach out
-7. **Social Media** - Links to FreeSip's social media platforms
-8. **Footer** - Navigation, contact info, and legal links
+## Quick Start
 
-## Getting Started
+```bash
+# Install dependencies
+npm install
 
-### Prerequisites
+# Run development server
+npm run dev
 
-- Node.js (v14.0.0 or higher)
-- npm (v6.0.0 or higher)
-
-### Installation
-
-1. Clone the repository:
-   ```
-   git clone https://github.com/yourusername/freesip.git
-   cd freesip
-   ```
-
-2. Install dependencies:
-   ```
-   npm install
-   ```
-
-3. Run the development server:
-   ```
-   npm run dev
-   ```
-
-4. Open your browser and navigate to:
-   ```
-   http://localhost:5173
-   ```
-
-## Building for Production
-
-To create a production build:
-
-```
+# Build for production
 npm run build
 ```
 
-The build files will be located in the `dist` folder.
-
 ## Tech Stack
 
-- React.js
-- Vite
-- Framer Motion (animations)
-- react-scroll (smooth scrolling)
-- react-intersection-observer (scroll animations)
-- react-icons (icon library)
+- React 19
+- Vite 6
+- Framer Motion
+- react-scroll
+- react-intersection-observer
+- react-icons
 
 ## Project Structure
 
 ```
-freesip/
-├── public/
-│   └── vite.svg
+/
+├── public/           # Static assets
 ├── src/
-│   ├── assets/
-│   │   ├── images/
-│   │   └── react.svg
-│   ├── components/
-│   │   ├── Navbar.jsx
-│   │   ├── Hero.jsx
-│   │   ├── About.jsx
-│   │   ├── HowItWorks.jsx
-│   │   ├── Benefits.jsx
-│   │   ├── Gallery.jsx
-│   │   ├── CallToAction.jsx
-│   │   ├── SocialMedia.jsx
-│   │   └── Footer.jsx
-│   ├── utils/
-│   │   └── imageUtils.js
-│   ├── App.css
-│   ├── App.jsx
-│   ├── index.css
-│   └── main.jsx
+│   ├── components/   # React components (Navbar, Hero, etc.)
+│   ├── utils/        # Utility functions
+│   ├── App.jsx       # Main application component
+│   └── main.jsx      # Entry point
 ├── index.html
-├── package.json
-└── vite.config.js
+└── package.json
 ```
 
-## Customization
+## Requirements
 
-### Adding Real Images
-
-For a production site, replace the placeholder images with real ones:
-
-1. Add your images to the `src/assets/images/` directory
-2. Update the image imports in the components
-
-### Changing Colors
-
-The color scheme is defined using CSS variables in `App.css`. Update the root variables to customize the site's look and feel.
+- Node.js 18+
+- npm 9+
 
 ## License
 
-This project is licensed under the MIT License.
-
-## Acknowledgments
-
-- Design and concept inspired by modern marketing websites
-- Icons provided by react-icons
-- Animations powered by Framer Motion
+MIT
