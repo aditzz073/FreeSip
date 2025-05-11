@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-scroll';
 import { FaEye, FaUsers, FaChartLine, FaShareAlt } from 'react-icons/fa';
 import './Benefits.css';
 
@@ -87,13 +88,15 @@ const Benefits = () => {
             Don't just be another forgotten logo on an event banner. 
             Be the brand that provides actual value and creates a tangible connection with your audience.
           </p>
-          <motion.button 
-            className="btn btn-primary"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Schedule a Consultation
-          </motion.button>
+          <Link to="contact" spy={true} smooth={true} duration={500}>
+            <motion.button 
+              className="btn btn-primary"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Get A Quote Right Now
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
     </section>
