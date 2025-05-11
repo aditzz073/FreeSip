@@ -9,7 +9,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 10;
+      const isScrolled = window.scrollY > 20;
       if (isScrolled !== scrolled) {
         setScrolled(isScrolled);
       }
@@ -35,11 +35,17 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+    <motion.nav 
+      className={`navbar ${scrolled ? 'scrolled' : ''}`}
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="container navbar-container">
         <Link to="home" className="navbar-logo" spy={true} smooth={true} duration={500}>
-          <img src="/logo.png" alt="FreeSip Logo" style={{ height: '44px', width: 'auto', display: 'block' }} />
+          <img src="/logo.png" alt="FreeSip Logo" />
         </Link>
+        
         <div className={`navbar-links ${mobileMenuOpen ? 'active' : ''}`}>
           {navItems.map((item) => (
             <Link
@@ -48,21 +54,23 @@ const Navbar = () => {
               spy={true}
               smooth={true}
               duration={500}
-              offset={-70}
+              offset={-72}
               className="navbar-link"
+              activeClass="active"
               onClick={() => setMobileMenuOpen(false)}
             >
               {item.name}
             </Link>
           ))}
-          <motion.button 
-            className="btn btn-primary navbar-cta"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Partner with Us
-          </motion.button>
         </div>
+
+        <motion.button 
+          className="btn btn-primary navbar-cta"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Partner with Us
+        </motion.button>
 
         <div className="hamburger" onClick={toggleMobileMenu}>
           <span className={`bar ${mobileMenuOpen ? 'active' : ''}`}></span>
@@ -70,7 +78,7 @@ const Navbar = () => {
           <span className={`bar ${mobileMenuOpen ? 'active' : ''}`}></span>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
