@@ -1,7 +1,8 @@
 .footer {
   background-color: var(--dark-blue);
+  height: 80vh;
   color: var(--white);
-  padding: 5rem 0 2rem;
+  padding: 0rem 0 2rem;
 }
 
 .footer-content {
@@ -12,7 +13,7 @@
 }
 
 .footer-logo-img {
-  max-width: 160px;
+  max-width: 170px;
   height: auto;
   margin-bottom: 0.5rem;
   filter: brightness(0) invert(1); /* Make the logo white */

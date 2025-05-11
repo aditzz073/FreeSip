@@ -80,9 +80,6 @@ const Footer = () => {
         
         <div className="footer-bottom">
           <p>&copy; {currentYear} FreeSip. All rights reserved.  </p>
-          <p className="sustainability-note">
-            Our bottles are made from 100% recyclable materials.
-          </p>
         </div>
       </div>
     </footer>
