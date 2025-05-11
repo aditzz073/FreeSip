@@ -1,14 +1,13 @@
 .social-media-section {
   background-color: #e6f7ff;
-  height: 65vh;
-  padding: 2rem 0;
+  padding: 3rem 0;
   text-align: center;
 }
 
 .social-heading {
   font-size: 1.8rem;
   color: var(--dark-blue);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .social-links {
@@ -16,7 +15,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .social-link {
