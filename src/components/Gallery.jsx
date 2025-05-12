@@ -11,52 +11,31 @@ const Gallery = () => {
   });
 
   // Cases categories
-  const categories = ['All', 'Music Festivals', 'College Events', 'Marathons', 'Corporate Events'];
+  const categories = ['All','Product',];
   const [activeCategory, setActiveCategory] = useState('All');
 
   // Gallery cases
   const cases = [
     {
       id: 1,
-      title: 'SoundWave Festival',
-      category: 'Music Festivals',
-      description: 'Branded bottles for 15,000 attendees at an electronic music festival.',
-      image: generatePlaceholderImage(1, 'Music Festivals')
+      title: 'Mockup ',
+      category: 'Product',
+      description: 'Mockup of a bottle with a logo and a message',
+      image: '/mockups/1.png'
     },
     {
       id: 2,
-      title: 'University Spring Fest',
-      category: 'College Events',
-      description: 'Custom designs for student organizations reaching 8,000 students.',
-      image: generatePlaceholderImage(1, 'College Events')
+      title: 'Our Impact',
+      category: 'Product',
+      description: 'Our impact with your product',
+      image: '/mockups/2.png'
     },
     {
       id: 3,
-      title: 'City Marathon',
-      category: 'Marathons',
-      description: 'Hydration station featuring branded bottles for 5,000 runners.',
-      image: generatePlaceholderImage(1, 'Marathons')
-    },
-    {
-      id: 4,
-      title: 'Tech Conference',
-      category: 'Corporate Events',
-      description: 'Premium branded water for industry leaders and innovators.',
-      image: generatePlaceholderImage(1, 'Corporate Events')
-    },
-    {
-      id: 5,
-      title: 'Summer Music Tour',
-      category: 'Music Festivals',
-      description: 'Multi-city campaign reaching over 50,000 music enthusiasts.',
-      image: generatePlaceholderImage(2, 'Music Festivals')
-    },
-    {
-      id: 6,
-      title: 'Sports Championship',
-      category: 'College Events',
-      description: 'Branded bottles for athletes and spectators at college finals.',
-      image: generatePlaceholderImage(2, 'College Events')
+      title: 'Mockup',
+      category: 'Product',
+      description: 'Mockup of a bottle with a logo and a message',
+      image: '/mockups/3.png'
     }
   ];
 
