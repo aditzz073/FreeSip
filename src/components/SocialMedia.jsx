@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaInstagram, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import './SocialMedia.css';
 
 const SocialMedia = () => {
@@ -23,10 +24,10 @@ const SocialMedia = () => {
       color: '#0077B5'
     },
     { 
-      name: 'Twitter', 
-      icon: <FaTwitter size={28} />, 
+      name: 'X.com', 
+      icon: <FaXTwitter size={28} />, 
       url: 'https://twitter.com/freesip',
-      color: '#1DA1F2'
+      color: '#000000'
     },
     { 
       name: 'Email', 
@@ -79,13 +80,13 @@ const SocialMedia = () => {
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="social-link"
+              className={`social-link ${!social.name ? 'icon-only' : ''}`}
               variants={itemVariants}
               whileHover={{ scale: 1.1 }}
               style={{ backgroundColor: social.color }}
             >
               {social.icon}
-              <span>{social.name}</span>
+              {social.name && <span>{social.name}</span>}
             </motion.a>
           ))}
         </motion.div>

@@ -50,6 +50,13 @@
   letter-spacing: 0.5px;
 }
 
+.social-link.icon-only {
+  padding: 0.8rem;
+  width: 64px; /* Set fixed width to match the average width of other buttons */
+  height: 64px; /* Set fixed height to match the height of other buttons */
+  justify-content: center;
+}
+
 .social-tagline {
   color: rgba(255, 255, 255, 0.7);
   font-size: 1.05rem;
