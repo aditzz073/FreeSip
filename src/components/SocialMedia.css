@@ -1,13 +1,15 @@
 .social-media-section {
-  background-color: #e6f7ff;
+  background-color: #004466;
   padding: 3rem 0;
   text-align: center;
 }
 
 .social-heading {
   font-size: 1.8rem;
-  color: var(--dark-blue);
+  color: var(--white);
   margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
 }
 
 .social-links {
@@ -28,13 +30,19 @@
   color: var(--white);
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .social-link:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 25px rgba(0, 166, 255, 0.25);
   color: white;
+  background-color: rgba(0, 166, 255, 0.15);
+  border-color: rgba(0, 166, 255, 0.3);
 }
 
 .social-link span {
@@ -43,8 +51,8 @@
 }
 
 .social-tagline {
-  color: var(--gray);
-  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.05rem;
   max-width: 500px;
   margin: 0 auto;
 }

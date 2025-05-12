@@ -1,8 +1,8 @@
 /* Global Styles for FreeSip Website */
 :root {
   --primary-blue: #0088cc;
-  --light-blue: #e6f7ff;
-  --dark-blue: #005580;
+  --light-blue: #004466; /* Changed from #e6f7ff to a darker blue */
+  --dark-blue: #002233; /* Made the dark-blue even darker for contrast */
   --white: #ffffff;
   --off-white: #f9f9f9;
   --light-gray: #f0f2f5;
@@ -182,4 +182,88 @@ a:hover {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Text color adjustments for dark backgrounds */
+.benefits-section .section-title,
+.gallery-section .section-title,
+.how-it-works-section .section-title,
+.social-media-section .social-heading,
+.about-section .section-title,
+.cta-section .section-title {
+  color: var(--white);
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.benefits-section .section-subtitle,
+.gallery-section .section-subtitle,
+.how-it-works-section .section-subtitle,
+.social-media-section .social-tagline,
+.about-section .section-subtitle,
+.cta-section .section-subtitle {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.1rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.benefits-section p,
+.gallery-section p,
+.how-it-works-section p,
+.cta-section p,
+.social-media-section p,
+.about-section p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.testimonial {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Improve contrast for buttons on dark backgrounds */
+.benefits-section .btn-primary,
+.gallery-section .btn-primary,
+.how-it-works-section .btn-primary,
+.cta-section .btn-primary {
+  background: linear-gradient(135deg, #00a6ff, #0088cc);
+  box-shadow: 0 4px 15px rgba(0, 166, 255, 0.4);
+}
+
+/* Improve card styling on dark backgrounds */
+.benefit-card,
+.step-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-card .benefit-title,
+.step-card .step-title {
+  color: var(--white);
+}
+
+.benefit-card .benefit-description,
+.step-card .step-description {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.gallery-note {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Enhanced readability for lists on dark backgrounds */
+.cta-benefits li {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Form adjustments for dark backgrounds */
+.form-group label {
+  color: var(--white);
 }

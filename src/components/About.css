@@ -1,5 +1,5 @@
 .about-section {
-  background-color: #e6f7ff;
+  background-color: #004466;
   position: relative;
 }
 
@@ -16,19 +16,23 @@
 }
 
 .pillar {
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.08);
   border-radius: var(--border-radius);
   padding: 2rem 1.5rem;
   text-align: center;
-  box-shadow: var(--box-shadow);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   transition: var(--transition);
   width: 100%;
   max-width: 340px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .pillar:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .pillar-icon {
@@ -39,28 +43,32 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 0 25px rgba(0, 166, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .pillar-icon.hydration {
-  background: linear-gradient(135deg, #e6f7ff, #b3e5fc);
+  background: linear-gradient(135deg, #004466, #0088cc);
 }
 
 .pillar-icon.roi {
-  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  background: linear-gradient(135deg, #00a6ff, #0088cc);
 }
 
 .pillar-icon.connection {
-  background: linear-gradient(135deg, #e1f5fe, #b3e5fc);
+  background: linear-gradient(135deg, #29b6f6, #0088cc);
 }
 
 .pillar h4 {
-  color: var(--dark-blue);
+  color: var(--white);
   margin-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .pillar p {
   font-size: 0.95rem;
-  color: var(--gray);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 /* Icons for pillars using pseudo-elements */

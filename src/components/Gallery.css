@@ -1,5 +1,5 @@
 .gallery-section {
-  background-color: #e6f7ff;
+  background-color: #004466;
   position: relative;
 }
 
@@ -14,20 +14,23 @@
 
 .filter-btn {
   padding: 0.6rem 1.5rem;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 50px;
   font-size: 0.95rem;
   font-weight: 500;
-  background: var(--light-gray);
-  color: var(--gray);
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.7);
   cursor: pointer;
   transition: var(--transition);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .filter-btn:hover, .filter-btn.active {
-  background: var(--primary-blue);
+  background: linear-gradient(135deg, #00a6ff, #0088cc);
   color: var(--white);
-  box-shadow: 0 4px 15px rgba(0, 136, 204, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 166, 255, 0.4);
+  border-color: rgba(0, 166, 255, 0.5);
 }
 
 .gallery-grid {
@@ -103,11 +106,17 @@
 
 .gallery-note {
   text-align: center;
-  color: var(--gray);
+  color: rgba(255, 255, 255, 0.7);
   font-size: 0.95rem;
   max-width: 800px;
   margin: 0 auto;
   font-style: italic;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 @media (max-width: 991px) {
