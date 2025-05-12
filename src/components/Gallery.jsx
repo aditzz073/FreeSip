@@ -116,8 +116,8 @@ const Gallery = () => {
           transition={{ delay: 0.6 }}
         >
           <p>
-            Note: Each case represents a successful campaign where brands achieved significant exposure
-            while providing valuable hydration to event attendees.
+            <strong>Success Stories:</strong> Showcasing brands that elevated their presence through 
+            refreshing hydration experiences, leaving lasting impressions on event attendees.
           </p>
         </motion.div>
       </div>
