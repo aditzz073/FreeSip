@@ -64,11 +64,10 @@ const Navbar = () => {
           ))}
         </div>
 
-        <motion.button 
+        <button 
           className="btn btn-primary navbar-cta"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={() => {
+          onClick={(e) => {
+            e.preventDefault();
             const element = document.getElementById('partner-with-us');
             if (element) {
               element.scrollIntoView({ behavior: 'smooth' });
@@ -76,7 +75,7 @@ const Navbar = () => {
           }}
         >
           Partner with Us
-        </motion.button>
+        </button>
 
         <div className="hamburger" onClick={toggleMobileMenu}>
           <span className={`bar ${mobileMenuOpen ? 'active' : ''}`}></span>
