@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { generatePlaceholderImage } from '../utils/imageUtils';
 import './Gallery.css';
 
 const Gallery = () => {

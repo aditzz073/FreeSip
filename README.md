@@ -12,7 +12,6 @@ A modern React-based website for FreeSip, an innovative B2B event marketing solu
 - Social media integration with contact form
 - Optimized for mobile and desktop experiences
 - Animated components with scroll-triggered effects
-- 3D elements with Three.js integration
 
 ## Sections
 
