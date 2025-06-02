@@ -26,7 +26,7 @@ const SocialMedia = () => {
     { 
       name: 'X.com', 
       icon: <FaXTwitter size={28} />, 
-      url: 'https://twitter.com/freesip',
+      url: 'https://x.com/Freesipl26430',
       color: '#000000'
     },
     { 
