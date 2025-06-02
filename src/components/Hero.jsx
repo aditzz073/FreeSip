@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
-import { bottleImagePlaceholder } from '../utils/imageUtils';
+import bottleImage from '../assets/freesip-bottle.png';
 import './Hero.css';
 
 const Hero = () => {
@@ -62,10 +62,23 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <div className="water-splash">
-            <div 
-              className="bottle-image"
-              style={{ backgroundImage: `url("${bottleImagePlaceholder}")`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}
-            ></div>
+            <motion.div 
+              className="bottle-image breathing-animation"
+              animate={{
+                scale: [1, 1.02, 1],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            >
+              <img 
+                src={bottleImage} 
+                alt="FreeSip Bottle" 
+                className="bottle-img"
+              />
+            </motion.div>
           </div>
         </motion.div>
       </div>
