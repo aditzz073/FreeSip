@@ -7,9 +7,11 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "preview": "vite preview",
-    "security-audit": "npm audit --production",
-    "vercel-build": "vite build"
+    "security-audit": "npm audit --audit-level high",
+    "vercel-build": "vite build",
+    "ci": "npm install && npm run lint && npm run build"
   },
   "dependencies": {
     "framer-motion": "^12.9.2",
