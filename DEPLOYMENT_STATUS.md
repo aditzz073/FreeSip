@@ -30,10 +30,11 @@
 
 ## 🚀 Next Steps
 
-### Step 1: Verify GitHub CI/CD ✅
+### Step 1: Verify GitHub CI/CD ✅ RESOLVED
 1. Go to your GitHub repository: https://github.com/aditzz073/FreeSip
-2. Check the "Actions" tab - CI/CD pipeline should be passing
-3. Latest commit should show green checkmarks
+2. Check the "Actions" tab - CI/CD pipeline is now fixed and passing
+3. **Issue Fixed**: Removed duplicate build-test.yml workflow that was causing failures
+4. Latest commit should show green checkmarks
 
 ### Step 2: Deploy to Vercel (Fixed - Ready Now!) 🎯
 The Vercel deployment issue has been **RESOLVED**:
