@@ -36,27 +36,18 @@
 }
 
 .pillar-icon {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin: 0 auto 1.5rem;
+  margin-bottom: 1.5rem;
   display: flex;
-  align-items: center;
   justify-content: center;
-  box-shadow: 0 0 25px rgba(0, 166, 255, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.pillar-icon.hydration {
-  background: linear-gradient(135deg, #004466, #0088cc);
-}
-
-.pillar-icon.roi {
-  background: linear-gradient(135deg, #00a6ff, #0088cc);
-}
-
-.pillar-icon.connection {
-  background: linear-gradient(135deg, #29b6f6, #0088cc);
+  align-items: center;
+  color: #00a6ff; /* Brighter blue for better visibility */
+  background: rgba(0, 166, 255, 0.1);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 20px rgba(0, 166, 255, 0.2);
 }
 
 .pillar h4 {
@@ -69,31 +60,6 @@
 .pillar p {
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.75);
-}
-
-/* Icons for pillars using pseudo-elements */
-.pillar-icon.hydration::before,
-.pillar-icon.roi::before,
-.pillar-icon.connection::before {
-  content: '';
-  display: block;
-  width: 40px;
-  height: 40px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.pillar-icon.hydration::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230088cc'%3E%3Cpath d='M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm-2-9h4v6h-4v-6zm0-5h4v2h-4V6z'/%3E%3C/svg%3E");
-}
-
-.pillar-icon.roi::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230088cc'%3E%3Cpath d='M3.5 18.5l6-6 4 3L22 6.92 20.59 5.5l-7.09 8-4-3-7.5 7.5z'/%3E%3C/svg%3E");
-}
-
-.pillar-icon.connection::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230088cc'%3E%3Cpath d='M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z'/%3E%3C/svg%3E");
 }
 
 @media (max-width: 991px) {

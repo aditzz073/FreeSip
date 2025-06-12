@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { FaTint, FaChartLine, FaHeart } from 'react-icons/fa';
 import './About.css';
 
 const About = () => {
@@ -42,17 +43,23 @@ const About = () => {
           transition={{ delay: 0.2 }}
         >
           <div className="pillar">
-            <div className="pillar-icon hydration"></div>
+            <div className="pillar-icon">
+              <FaTint size={32} />
+            </div>
             <h4>Hydration + Brand Visibility</h4>
             <p>We deliver essential hydration while maximizing your brand's exposure in the hands of your target audience.</p>
           </div>
           <div className="pillar">
-            <div className="pillar-icon roi"></div>
+            <div className="pillar-icon">
+              <FaChartLine size={32} />
+            </div>
             <h4>High ROI</h4>
             <p>Turn a necessary event expense into a powerful marketing tool with lasting impressions.</p>
           </div>
           <div className="pillar">
-            <div className="pillar-icon connection"></div>
+            <div className="pillar-icon">
+              <FaHeart size={32} />
+            </div>
             <h4>Emotional Connection</h4>
             <p>Create positive brand associations by meeting a basic need at the right moment.</p>
           </div>
